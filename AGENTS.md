@@ -17,6 +17,9 @@ guidance unstated and no existing skill is an appropriate home.
 Keep workspace identities, private policies and credentials out of this public
 repository. Consumer-specific changes belong with that consumer.
 
+Keep investigation logs and point-in-time validation results in PR evidence.
+Repository documentation should describe maintained guidance.
+
 Before publishing, validate skill frontmatter and references, review for semantic
 duplication and inspect realistic examples. A clean textual merge does not prove
 that an updated instruction preserves its intent. Installed files are outputs;
