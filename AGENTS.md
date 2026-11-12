@@ -1,14 +1,15 @@
 # Authoring contract
 
 Keep each instruction in one authoritative place. Before adding guidance, inspect
-the live service instructions and schemas exposed by Bifrost, plus the existing
+the service instructions and schemas available in the current session, plus existing
 skills and workspace policy. Retain only guidance those sources do not provide.
 Link to authoritative references instead of copying their rules.
 
 Never embed executable tool identifiers, tool inventories, argument schemas or
-call recipes in skill instructions or their references. Bifrost owns capability
-discovery and access; skill text owns decisions and conventions. A service name
-identifies a domain, not a fixed tool interface.
+call recipes in skill instructions or their references. Discover capabilities
+through the configured service interface; keep connection setup and access control
+outside skills. Skill text owns decisions and conventions, independent of the
+MCP client, connection method or gateway.
 
 Keep service-specific operational judgment separate from workflow preferences.
 When useful guidance is missing or unclear, improve the existing skill or reference
