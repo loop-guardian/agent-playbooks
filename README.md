@@ -34,4 +34,3 @@ revision and rationale. Review upstream changes, resolve conflicts in a working
 checkout and verify the resolved instructions before updating an installation.
 Promote generally useful patches into the base and retire redundant downstream
 patches. No patch engine or new installer is included in this pilot.
-Reusable agent skills for services and practical workflows
