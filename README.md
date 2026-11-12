@@ -5,14 +5,13 @@ The [authoring contract](AGENTS.md) owns contribution rules.
 
 ## Linear pilot
 
-- `linear-service` supplies account-boundary judgment absent from the runtime interface.
 - `linear-workflow` supplies the work-structure baseline and its reference.
 
-Install both from the same reviewed Git revision using the Skills CLI:
+Install it from a reviewed Git revision using the Skills CLI:
 
 ```sh
 npx skills@1.7.6 add mmroczka/agent-playbooks@<reviewed-revision> \
-  --skill linear-service linear-workflow -a codex claude-code
+  --skill linear-workflow -a codex claude-code
 ```
 
 Replace the revision placeholder before running. Add a workspace adaptation from

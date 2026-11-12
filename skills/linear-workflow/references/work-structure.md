@@ -1,12 +1,24 @@
 # Work structure
 
-## Boundaries
+## Linear terminology
 
-An initiative expresses an intended outcome. A project is a finite effort with a
-completion condition. An issue is one bounded task. Keep a task in one issue while
-its parts share a completion condition; split only work that can be delivered or
-assigned independently. Create peer issues rather than sub-issues or umbrella
-parent tickets.
+These descriptions explain our usual intent when organizing work. Existing
+workspace conventions may include reasonable exceptions.
+
+- **Linear Initiative:** generally groups Projects around a broader intended outcome.
+- **Linear Project:** generally represents a coordinated effort with an identifiable
+  completion condition. Some workspaces also use standing Projects.
+- **Linear Issue:** represents an actionable piece of work, usually small enough to
+  track and complete as one task.
+
+Use existing groupings when they reasonably fit. These definitions alone are not
+a reason to create, rename, split or reorganize anything.
+
+## Task boundaries
+
+Keep a task in one Issue while its parts share a completion condition; split only
+work that can be delivered or assigned independently. Create peer Issues rather
+than sub-issues or umbrella parent tickets.
 
 ## Dependencies
 
@@ -18,12 +30,35 @@ coupling that does not impose execution order.
 
 ## Names
 
-Give initiatives and projects clear, concise names that describe the intended
-outcome in familiar language. Keep implementation jargon in supporting details
-when it is needed to explain the work.
+When creating an Initiative or Project, or when a rename is requested, prefer a
+clear, concise name describing its purpose in familiar language. Preserve existing
+names unless changing one materially helps the requested work.
+
+Consult the project's glossary when available, including terminology established
+during project discovery or grilling. Reuse agreed-upon domain terms consistently;
+they are useful vocabulary, not jargon to replace. Avoid inventing new terminology
+where an established term already expresses the meaning.
 
 ## Stable identity and evolving context
 
-Keep a project's purpose and scope stable in its description. Put evolving
+Keep a Project's purpose and scope stable in its description. Put evolving
 decisions and progress in the workspace's designated discussion or document
 surface. Let the selected workspace policy determine that surface and its format.
+
+## Occasional structural suggestions
+
+While doing the requested work, consider a brief suggestion if the material
+already inspected shows overlapping Project outcomes, duplicate effort or unclear
+ownership that makes the work harder to plan or deliver. Similar names alone are
+not evidence of a problem. Check relevant descriptions and agreed terminology
+before concluding that boundaries overlap.
+
+Finish the requested task, then offer at most one concise suggestion naming the
+affected work, the observed problem and a concrete benefit of clarifying, combining,
+splitting or regrouping it. Use tentative wording when the evidence is incomplete.
+Leave structural changes as proposals unless the user has authorized that work.
+
+Routine tracker work does not call for a workspace-wide audit. Skip cosmetic or
+low-value suggestions, and do not repeat a suggestion already acknowledged or
+declined in the available context unless material new evidence changes it. This
+does not require a new tracking file or memory entry.
