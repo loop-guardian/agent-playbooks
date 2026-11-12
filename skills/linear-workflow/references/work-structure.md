@@ -35,7 +35,10 @@ clear, concise name describing its purpose in familiar language. Preserve existi
 names unless changing one materially helps the requested work.
 
 Consult the project's glossary when available, including terminology established
-during project discovery or grilling. Reuse agreed-upon domain terms consistently;
+during project discovery or grilling. Follow the repository's own pointer and
+filename: it may be `CONTEXT.md` (or `context.md`), rather than `GLOSSARY.md`.
+Use the existing source instead of creating or renaming a glossary for this task.
+Reuse agreed-upon domain terms consistently;
 they are useful vocabulary, not jargon to replace. Avoid inventing new terminology
 where an established term already expresses the meaning.
 

@@ -11,7 +11,9 @@ discovery and access; skill text owns decisions and conventions. A service name
 identifies a domain, not a fixed tool interface.
 
 Keep service-specific operational judgment separate from workflow preferences.
-Add a service skill only when the live interface leaves useful guidance unstated.
+When useful guidance is missing or unclear, improve the existing skill or reference
+that owns it. Add a service skill only when the live interface leaves useful
+guidance unstated and no existing skill is an appropriate home.
 Keep workspace identities, private policies and credentials out of this public
 repository. Consumer-specific changes belong with that consumer.
 
