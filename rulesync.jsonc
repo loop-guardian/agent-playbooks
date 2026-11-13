@@ -1,0 +1,17 @@
+{
+  "$schema": "https://github.com/dyoshikawa/rulesync/releases/download/v43.8.2/config-schema.json",
+  "targets": [
+    "claudecode",
+    "codexcli"
+  ],
+  "features": [
+    "skills"
+  ],
+  "inputRoots": [
+    ".rulesync"
+  ],
+  "outputRoots": [
+    ".rulesync-output"
+  ],
+  "delete": false
+}
