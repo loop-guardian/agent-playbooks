@@ -1,0 +1,4 @@
+
+# Rulesync caches and isolated generated output
+.rulesync/skills/.curated/
+.rulesync-output/

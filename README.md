@@ -1,35 +1,40 @@
 # Agent playbooks
 
-Public skills for service-specific judgment and reusable work conventions.
-The [authoring contract](AGENTS.md) owns contribution rules.
+Public reusable guidance. The [authoring contract](AGENTS.md) owns contribution rules.
 
-## Linear pilot
+## Rulesync pilot
 
-- `linear-workflow` supplies the work-structure baseline and its reference.
-
-Install it from a reviewed Git revision using the Skills CLI:
+Authored pilot skills live in `.rulesync/skills/`. Use Rulesync 43.8.2:
 
 ```sh
-npx skills@1.7.6 add mmroczka/agent-playbooks@<reviewed-revision> \
-  --skill linear-workflow -a codex claude-code
+npx --yes rulesync@43.8.2 install --frozen
+npx --yes rulesync@43.8.2 generate
 ```
 
-Replace the revision placeholder before running. Add a workspace adaptation from
-its owning repository when required. Referencing another skill does not install
-it. Each complete skill directory is portable; Hermes requires installation in
-the intended profile's skill catalog and separate verification there.
+The default preview writes Claude Code and Codex skills under `.rulesync-output/`,
+leaving active installations untouched. Installation fetches dependencies;
+generation emits runtime files. Commit `rulesync.jsonc` and a `rulesync.lock` when external sources are selected,
+not curated caches or generated output. Sources and skill selections are explicit.
 
-## Ownership and updates
+For an update, change the pinned source revision, run `install --update`, review
+the source diff and lockfile, then regenerate in a fresh preview directory.
+Local additions use distinct skill names. A same-name local skill replaces the
+entire upstream skill; upstream changes require manual review, not an automatic merge.
 
-This repository owns shared defaults. Workspace adaptations own only their
-differences and source pointers. A consumer's `upstream.lock` records the base
-revision for review; it is provenance metadata, not an automatic dependency resolver.
-Update dependencies explicitly through a consumer PR. Do not assume installer
-updates merge local modifications.
+Hermes skills require global scope in this version. Verify generation with an
+isolated home before the integration owner selects a real profile. Installed files
+do not prove runtime loading or implicit selection.
 
-Use workspace policy for expected differences. Use a small Git patch only for a
-core instruction that cannot be expressed by that policy, retaining its base
-revision and rationale. Review upstream changes, resolve conflicts in a working
-checkout and verify the resolved instructions before updating an installation.
-Promote generally useful patches into the base and retire redundant downstream
-patches. No patch engine or new installer is included in this pilot.
+Generate into fresh, exclusively owned output directories. Default generation can
+leave removed companion files, while `--delete` can remove unrelated skills.
+Verify the complete output file manifest, preserve the previous config/lock/source
+revision and output snapshot, and restore that snapshot for rollback. Mixed-owner
+installation cleanup belongs to the scoped rollout, not this preview.
+
+## Consumer selection
+
+Select this repository’s `.rulesync/skills` source path and `linear-workflow`
+explicitly from a reviewed commit. For GitHub transport the source form is
+`loop-guardian/agent-playbooks@<reviewed-commit>:.rulesync/skills`.
+Workspace adaptations remain additive skills in their owning repositories.
+Teammates can consume this baseline without access to a personal repository.
