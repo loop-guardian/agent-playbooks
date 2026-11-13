@@ -4,7 +4,14 @@ Public reusable guidance. The [authoring contract](AGENTS.md) owns contribution 
 
 ## Rulesync pilot
 
-Authored pilot skills live in `.rulesync/skills/`. Use Rulesync 43.8.2:
+Authored pilot skills live in `.rulesync/skills/`. Use Rulesync 43.8.2.
+For a new consumer selection, create the lockfile with a plain install first:
+
+```sh
+npx --yes rulesync@43.8.2 install
+```
+
+Review and commit the generated lockfile. For subsequent installs or CI:
 
 ```sh
 npx --yes rulesync@43.8.2 install --frozen
@@ -38,3 +45,7 @@ explicitly from a reviewed commit. For GitHub transport the source form is
 `loop-guardian/agent-playbooks@<reviewed-commit>:.rulesync/skills`.
 Workspace adaptations remain additive skills in their owning repositories.
 Teammates can consume this baseline without access to a personal repository.
+
+Preview output is for inspection. Runtime installation, profile selection and actual
+skill loading are separate integration steps; these commands do not activate skills
+in an existing user catalog.
