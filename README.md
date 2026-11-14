@@ -59,7 +59,9 @@ still apply. Other skill packages are unchanged.
 
 Keep repository bodies in `.agents/skills/<name>/workflow.md` with the entry beside
 it. Claude uses a small `.claude/skills/<name>/SKILL.md` compatibility entry pointing
-to the canonical entry. Keep the existing directory so local extras survive updates.
+to the canonical entry. Before replacing an existing standalone entry, move its
+repository-specific workflow body and required companions into the canonical package.
+Keep the existing directory so local extras survive updates.
 Companion files belong beside the selected workflow. Older checkouts with a standalone
 Claude workflow remain supported during migration.
 
@@ -74,7 +76,8 @@ entry; use the actual workflow body and its companions.
 
 Claude and Hermes select a same-name entry natively. For Codex, when both personal
 and repository entries exist, keep exactly one advertised entry using **user-level**
-`~/.codex/config.toml` selection, alongside installation of that personal package:
+`~/.codex/config.toml` selection. Install or update the complete personal package to
+this workflow-selection version before applying the filters:
 
 ```toml
 [[skills.config]]
