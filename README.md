@@ -40,7 +40,7 @@ installation cleanup belongs to the scoped rollout, not this preview.
 
 ## Consumer selection
 
-Select this repository’s `.rulesync/skills` source path and `linear-workflow`
+Select this repository’s `.rulesync/skills` source path and the desired skills (`linear-workflow`, `ticket-impact-scan`)
 explicitly from a reviewed commit. For GitHub transport the source form is
 `loop-guardian/agent-playbooks@<reviewed-commit>:.rulesync/skills`.
 Workspace adaptations remain additive skills in their owning repositories.
