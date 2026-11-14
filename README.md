@@ -58,7 +58,8 @@ Claude repository workflow, then bundled personal default. Repository-wide rules
 still apply. Other skill packages are unchanged.
 
 Keep repository bodies in `.agents/skills/<name>/workflow.md` with the entry beside
-it. Claude discovers a relative symlink from `.claude/skills/<name>` to that package.
+it. Claude uses a small `.claude/skills/<name>/SKILL.md` compatibility entry pointing
+to the canonical entry. Keep the existing directory so local extras survive updates.
 Companion files belong beside the selected workflow. Older checkouts with a standalone
 Claude workflow remain supported during migration.
 

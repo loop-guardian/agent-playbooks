@@ -8,12 +8,15 @@ description: Use when preparing commits or pull requests, merging changes, or de
 Resolve the current working directory's Git repository root and absolute common
 Git directory. Outside Git, use the bundled workflow.
 
-Select the first existing file in this order:
+First inspect `<common-git-directory>/skill-overrides/release-flow` itself, including
+whether it is a symlink. If present but broken, unreadable, or missing its readable
+`SKILL.md`, report the configuration error and stop. Otherwise select the first
+available workflow in this order:
 
 1. `<common-git-directory>/skill-overrides/release-flow/SKILL.md`
 2. `<repository-root>/.agents/skills/release-flow/workflow.md`
 3. In older checkouts only, `<repository-root>/.claude/skills/release-flow/SKILL.md`,
-   provided it is a standalone workflow rather than this selection entry.
+   provided it is a standalone workflow, not a selection or compatibility entry.
 4. `workflow.md` beside this entry.
 
 Read and follow only the selected workflow, preserving the user's arguments.
